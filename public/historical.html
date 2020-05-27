@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Historical</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../static/assets/css/website2.css">
+	<link rel="stylesheet" href="../static/assets/css/main.css" />
+	<script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+
+	<noscript>
+		<link rel="stylesheet" href="../static/assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1 id="logo"><a href="#">DARK</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="../public/index.html" style="color: white;">Home</a></li>
+					<li><a href="../public/real_time.html" id="q" style="color: white;">Real Time</a></li>
+					<li>
+						<a href="#" style="color: white;">Historical</a>
+						<ul>
+							<li><a href="../public/historical.html">Where was my truck ..?</a></li>
+							<li><a href="../public/historical2.html">How many times does my truck pass by ...?</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<!-- <input type="text" name="datetimes" id="dtp" /> -->
+
+		<div id="main" style="display: flex;flex-grow: 1;flex-direction: row;">
+			<div id="leftContainer">
+				<div id="buscar">
+
+					<h2 id="letra123" style="align-self: center;">Seleccione el rango de busqueda</h2>
+					<input type="text" id="demo" name="datefilter" />
+
+					<input type="submit" class="button primary" id="consultar" value="Buscar">
+
+				</div>
+				<div id="chart" style="display: flex; flex-grow: 1;"></div>
+			</div>
+			<div id="rightContainer">
+				<div id="map"></div>
+
+			</div>
+
+			<!-- <div id="map" style="width: 1300px; height: 1000px; position: left; outline: none;"></div> -->
+
+		</div>
+
+
+
+
+		<!-- Scripts -->
+		<script>
+			$('#demo').daterangepicker({
+				timePicker: true,
+				timerFormat: 'HH:mm:ss',
+				singleDatePicker: false,
+				startDate: moment().subtract(24, 'hour'),
+				endDate: moment(),
+				timePicker24Hour: false,
+				timePickerIncrement: 1,
+				timePickerSeconds: true,
+				"maxDate": moment(),
+				startValue: moment(),
+				locale: {
+					format: 'YYYY-MM-DD HH:mm:ss A'
+				},
+			});
+		</script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""></script>
+		<script src="../static/assets/js/jquery.min.js"></script>
+		<script src="../static/assets/js/jquery.scrolly.min.js"></script>
+		<script src="../static/assets/js/jquery.dropotron.min.js"></script>
+		<script src="../static/assets/js/jquery.scrollex.min.js"></script>
+		<script src="../static/assets/js/browser.min.js"></script>
+		<script src="../static/assets/js/breakpoints.min.js"></script>
+		<script src="../static/assets/js/util.js"></script>
+		<script src="../static/assets/js/main.js"></script>
+
+		<!-- <script src="../static/assets/js/datetimepicker.js"></script> -->
+		<script src="../static/assets/js/historicos.js"></script>
+	</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <div id="main" class="wrapper style1">
+
+	<div id="buscar" style="position: topleft;">
+
+		<h2 id="letra" style="color: white;">Seleccione el rango de busqueda</h2>
+		<input type="text" id="demo" name="datefilter" />
+
+		<ul>
+			<input type="submit" class="button primary" id="consultar" value="Buscar">
+		</ul>
+
+	</div>
+
+
+
+
+	<div id="map" style="width: 1300px; height: 1000px; position: left; outline: none;"></div>
+</div> -->

@@ -1,0 +1,24 @@
+{
+  "name": "sharon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
+    "dgram": "^1.0.1",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "plotly.js-dist": "^1.54.1",
+    "rangeslider.js": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
