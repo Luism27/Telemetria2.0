@@ -15,9 +15,15 @@ server.on('error', (err) => {
     fecha=mensaje1[1];
     latitud = mensaje1[2];
     longitud = mensaje1[3];
-    rpm = mensaje1[4];
     ids=mensaje1[5].slice(3, mensaje1[5].length-1);
-  
+    var RandomNumber = Math.floor(Math.random() * 1000) + 999;
+    if (ids == "HXS313"){
+
+      rpm = 0;
+    }else{
+      rpm = RandomNumber;
+    }
+    //console.log(RandomNumber)
     fech = new Date(parseFloat(fecha)-18000000);
     Fecha = `${fech.getFullYear()}-${fech.getMonth() + 1}-${fech.getDate()}`;
     Hora = `${fech.getHours()}:${fech.getMinutes()}:${fech.getSeconds()}`;
